@@ -5,10 +5,10 @@ const mongoose = require('mongoose')
 const router = require('./routes')
 const bodyParser = require('body-parser')
 
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: true }))
  
 // parse application/json
-app.use(bodyParser.json())
+app.use(express.json())
 
 
 app.set('view engine', 'ejs')
